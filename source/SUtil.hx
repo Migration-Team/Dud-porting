@@ -25,12 +25,6 @@ using StringTools;
 
 class SUtil
 {
-	static final videoFiles:Array<String> = [
-		"Fart",
-		"deleted",
-		"fly",
-		"uhoh"
-	];
 	
 	#if android
 	private static var aDir:String = null; // android dir
@@ -78,23 +72,6 @@ class SUtil
 				}
 
 			}
-			if (Permissions.getGrantedPermissions().contains(PermissionsList.WRITE_EXTERNAL_STORAGE)
-			&& Permissions.getGrantedPermissions().contains(PermissionsList.READ_EXTERNAL_STORAGE))
-		{
-			if (!FileSystem.exists(SUtil.getPath()))
-				FileSystem.createDirectory(SUtil.getPath());
-
-			if (!FileSystem.exists(SUtil.getPath() + "assets"))
-				FileSystem.createDirectory(SUtil.getPath() + "assets");
-
-			if (!FileSystem.exists(SUtil.getPath() + 'assets/videos'))
-				FileSystem.createDirectory(SUtil.getPath() + 'assets/videos');
-			
-			if (!FileSystem.exists(SUtil.getPath() + 'assets/videos/Fart.mp4'))
-				FileSystem.createDirectory(SUtil.getPath() + 'assets/videos/Fart.mp4');
-			
-		}
-		}
 		#end
 	}
 
